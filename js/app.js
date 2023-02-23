@@ -17,7 +17,7 @@ resetBtn.addEventListener('click', () => {
     formInput.reset()
 })
 formInput.addEventListener('submit', (e) => {
-    e.preventDefault
+    e.preventDefault()
 })
 
 // functions
@@ -56,8 +56,9 @@ function validateform() {
 
 // TITLE : check sendBtn status
 function checkSendBtnStatus() {
-    // if email
+    // if emailInput,subjectInput and messageInput contains 'valid' class
     if (emailInput.classList.contains('valid') && subjectInput.classList.contains('valid') && messageInput.classList.contains('valid')) {
+        // sendBtn disabled become to false
         sendBtn.disabled = false
     } else {
         sendBtn.disabled = true
